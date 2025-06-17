@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>925 Studio Pratas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -12,102 +13,88 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #fff;
-      color: #333;
+      font-family: 'Playfair Display', serif;
+      background: #fff;
+      color: #000;
     }
     header {
-      background-color: #000;
+      background: #000;
       color: #fff;
-      padding: 20px;
       text-align: center;
+      padding: 1rem;
+      position: relative;
     }
     header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      letter-spacing: 2px;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+      color: #ccc;
     }
     nav {
-      display: flex;
-      justify-content: center;
       background-color: #111;
-      padding: 10px 0;
+      display: flex;
+      justify-content: space-around;
+      padding: 0.8rem 0;
     }
     nav a {
-      color: #fff;
+      color: white;
       text-decoration: none;
-      margin: 0 15px;
-      font-size: 16px;
+      font-size: 0.9rem;
+      transition: color 0.3s;
     }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1600180758890-12a6c03b9b24?auto=format&fit=crop&w=1350&q=80') center/cover;
-      height: 400px;
+    nav a:hover {
+      color: #bbb;
+    }
+    .search-bar {
       display: flex;
-      align-items: center;
       justify-content: center;
-      color: #fff;
-      text-align: center;
+      margin: 1rem;
     }
-    .hero h2 {
-      background-color: rgba(0,0,0,0.6);
-      padding: 20px;
-      font-size: 32px;
-    }
-    .section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .section h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    .produtos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .produto {
+    .search-bar input {
+      width: 80%;
+      max-width: 400px;
+      padding: 0.5rem;
+      border-radius: 25px;
       border: 1px solid #ccc;
+    }
+    .impact {
+      background: #444;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1rem;
+      margin: 1rem;
       border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
     }
-    .produto img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
+    section {
+      padding: 1rem;
     }
-    .produto p {
-      padding: 10px;
-      font-weight: bold;
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
     }
-    .cta {
-      background-color: #111;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 14px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      z-index: 1000;
     }
-    .cta h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
+    .whatsapp:hover {
+      background-color: #1da851;
     }
-    .cta a {
-      background-color: #fff;
-      color: #000;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-    footer {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
     }
   </style>
 </head>
@@ -120,43 +107,28 @@
   <nav>
     <a href="#feminino">Feminino</a>
     <a href="#masculino">Masculino</a>
-    <a href="https://instagram.com/925studio_pratas" target="_blank">Instagram</a>
-    <a href="https://wa.me/55xxxxxxxxxxx" target="_blank">WhatsApp</a>
+    <a href="https://www.instagram.com/925studio_pratas" target="_blank">Instagram</a>
+    <a href="https://wa.me/SEUNUMERO" target="_blank">WhatsApp</a>
   </nav>
 
-  <section class="hero">
-    <h2>Cada peça carrega uma história. Encontre a sua.</h2>
+  <div class="search-bar">
+    <input type="text" placeholder="O que você está buscando?">
+  </div>
+
+  <div class="impact">Cada peça carrega uma história. Encontre a sua.</div>
+
+  <section id="feminino">
+    <h2>Feminino</h2>
+    <p>Adicione aqui os produtos femininos...</p>
   </section>
 
-  <section class="section" id="feminino">
-    <h3>Feminino</h3>
-    <div class="produtos">
-      <div class="produto">
-        <img src="https://via.placeholder.com/300x300" alt="Anel Feminino">
-        <p>Anel de Prata</p>
-      </div>
-      <!-- Outros produtos femininos -->
-    </div>
+  <section id="masculino">
+    <h2>Masculino</h2>
+    <p>Adicione aqui os produtos masculinos...</p>
   </section>
 
-  <section class="section" id="masculino">
-    <h3>Masculino</h3>
-    <div class="produtos">
-      <div class="produto">
-        <img src="https://via.placeholder.com/300x300" alt="Corrente Masculina">
-        <p>Corrente de Prata</p>
-      </div>
-      <!-- Outros produtos masculinos -->
-    </div>
-  </section>
-
-  <section class="cta">
-    <h2>Entrega para todo o Brasil • Garantia vitalícia • Qualidade 925</h2>
-    <a href="https://wa.me/55xxxxxxxxxxx" target="_blank">Compre pelo WhatsApp</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 925 Studio Pratas. Todos os direitos reservados.</p>
-  </footer>
+  <a class="whatsapp" href="https://wa.me/SEUNUMERO" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>
