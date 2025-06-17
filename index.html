@@ -1,134 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>925 Studio Pratas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papLF++a76PFaGLt8phRVXtM+Uiw0/V9zGHf+o9IJK1q4JbH6jA1uHcTiwS3t+OnljHJg3fSTfG0S3qFkE2n0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Playfair Display', serif;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background: #fff;
       color: #000;
     }
     header {
       background: #000;
       color: #fff;
-      text-align: center;
-      padding: 1rem;
-      position: relative;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     header h1 {
-      font-size: 1.8rem;
-      letter-spacing: 1px;
+      font-size: 24px;
+      margin: 0;
     }
-    header p {
-      font-size: 0.9rem;
-      margin-top: 0.2rem;
-      color: #ccc;
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
     }
     nav {
-      background-color: #111;
-      display: flex;
-      justify-content: space-around;
-      padding: 0.8rem 0;
+      display: none;
+      background: #000;
+      color: #fff;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 100;
     }
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.3s;
+      padding: 15px;
+      border-bottom: 1px solid #333;
     }
-    nav a:hover {
-      color: #bbb;
+    .show-menu nav {
+      display: flex;
+    }
+    .impacto {
+      background: #444;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
     }
     .search-bar {
       display: flex;
       justify-content: center;
-      margin: 1rem;
+      padding: 15px;
     }
     .search-bar input {
-      width: 80%;
+      width: 90%;
       max-width: 400px;
-      padding: 0.5rem;
+      padding: 8px;
       border-radius: 25px;
       border: 1px solid #ccc;
     }
-    .impact {
-      background: #444;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      font-size: 1rem;
-      margin: 1rem;
-      border-radius: 8px;
-    }
-    section {
-      padding: 1rem;
-    }
-    section h2 {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-    }
-    .whatsapp {
+    .whatsapp-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #25D366;
+      background-color: #25d366;
       color: white;
-      padding: 12px 14px;
       border-radius: 50%;
-      font-size: 1.5rem;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
       z-index: 1000;
     }
-    .whatsapp:hover {
-      background-color: #1da851;
-    }
-    .logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 80px;
+    .whatsapp-button i {
+      font-size: 24px;
     }
   </style>
 </head>
 <body>
   <header>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
     <h1>925 Studio Pratas</h1>
-    <p>Estilo, atitude e garantia vitalícia</p>
+    <a href="https://925studio_pratas" target="_blank" style="color: white;">
+      <i class="fab fa-instagram"></i>
+    </a>
   </header>
-
   <nav>
     <a href="#feminino">Feminino</a>
     <a href="#masculino">Masculino</a>
     <a href="https://www.instagram.com/925studio_pratas" target="_blank">Instagram</a>
-    <a href="https://wa.me/SEUNUMERO" target="_blank">WhatsApp</a>
+    <a href="https://wa.me/SEUNUMEROAQUI" target="_blank">WhatsApp</a>
   </nav>
+
+  <div class="impacto">
+    Cada peça carrega uma história. Encontre a sua.
+  </div>
 
   <div class="search-bar">
     <input type="text" placeholder="O que você está buscando?">
   </div>
 
-  <div class="impact">Cada peça carrega uma história. Encontre a sua.</div>
+  <!-- Seus catálogos, carrossel e imagens vêm aqui depois -->
 
-  <section id="feminino">
-    <h2>Feminino</h2>
-    <p>Adicione aqui os produtos femininos...</p>
-  </section>
-
-  <section id="masculino">
-    <h2>Masculino</h2>
-    <p>Adicione aqui os produtos masculinos...</p>
-  </section>
-
-  <a class="whatsapp" href="https://wa.me/SEUNUMERO" target="_blank">
+  <a class="whatsapp-button" href="https://wa.me/SEUNUMEROAQUI" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <script>
+    function toggleMenu() {
+      document.body.classList.toggle('show-menu');
+    }
+  </script>
 </body>
 </html>
+
