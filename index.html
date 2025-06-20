@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -25,32 +26,45 @@
       font-size: 14px;
       margin: 5px 0 0;
     }
-    nav {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
       background-color: #111;
-      padding: 10px 20px;
+      color: white;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      z-index: 1000;
     }
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .sidebar a {
+      display: block;
+      padding: 15px 25px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .sidebar a:hover {
+      background-color: #333;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 500;
     }
     .menu-toggle {
-      display: block;
-      cursor: pointer;
       font-size: 26px;
       color: #fff;
-    }
-    .menu-links {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      background-color: #111;
-      padding: 10px 0;
-    }
-    .menu-links a {
-      color: #fff;
-      text-decoration: none;
-      padding: 8px 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
     }
     .impacto {
       background-color: #555;
@@ -74,6 +88,7 @@
     }
     section {
       padding: 20px;
+      text-align: center;
     }
     h2 {
       font-size: 22px;
@@ -81,26 +96,12 @@
       padding-bottom: 5px;
       margin-bottom: 15px;
     }
-    .catalogo {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 15px;
-    }
-    .item {
-      background-color: #eee;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: center;
-    }
-    .item img {
+    .imagem-destaque {
       width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-    .item p {
-      margin-top: 8px;
-      font-size: 14px;
+      max-width: 400px;
+      height: auto;
+      border-radius: 12px;
+      cursor: pointer;
     }
     .whatsapp-btn {
       position: fixed;
@@ -119,35 +120,24 @@
       text-decoration: none;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
-    @media(min-width: 700px) {
-      .menu-links {
-        display: flex !important;
-        flex-direction: row;
-        gap: 30px;
-        padding: 0;
-      }
-      .menu-toggle {
-        display: none;
-      }
-    }
   </style>
 </head>
 <body>
   <header>
     <h1>925 Studio Pratas</h1>
     <p>Estilo, atitude e garantia vitalícia</p>
+    <button class="menu-toggle" onclick="abrirMenu()">&#9776;</button>
   </header>
 
-  <nav>
-    <div class="nav-container">
-      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-      <div class="menu-links" id="menu">
-        <a href="#feminino">Feminino</a>
-        <a href="#masculino">Masculino</a>
-        <a href="https://wa.me/5511919710044" target="_blank">WhatsApp</a>
-      </div>
-    </div>
-  </nav>
+  <div class="sidebar" id="sidebar">
+    <a href="#feminino">Feminino</a>
+    <a href="#masculino">Masculino</a>
+    <a href="#prontaentrega">Pronta Entrega</a>
+    <a href="#maisvendidos">Mais Vendidos</a>
+    <a href="#promocoes">Promoções</a>
+    <a href="https://wa.me/5511919710044" target="_blank">WhatsApp</a>
+  </div>
+  <div class="overlay" id="overlay" onclick="fecharMenu()"></div>
 
   <div class="impacto">Cada peça carrega uma história. Encontre a sua.</div>
 
@@ -157,29 +147,22 @@
 
   <section id="prontaentrega">
     <h2>Pronta Entrega</h2>
-    <div class="catalogo">
-      <div class="item"><img src="https://source.unsplash.com/160x160/?jewelry" alt="Produto 1"><p>Anel Feminino Prata 925</p></div>
-      <div class="item"><img src="https://source.unsplash.com/160x160/?ring" alt="Produto 2"><p>Brinco Elegante</p></div>
-      <div class="item"><img src="https://source.unsplash.com/160x160/?silver-necklace" alt="Produto 3"><p>Colar de Prata</p></div>
-    </div>
+    <a href="#galeria"><img class="imagem-destaque" src="https://source.unsplash.com/400x300/?silver-jewelry" alt="Pronta Entrega"></a>
   </section>
 
   <section id="maisvendidos">
     <h2>Mais Vendidos</h2>
-    <div class="catalogo">
-      <div class="item"><img src="https://source.unsplash.com/160x160/?bracelet" alt="Produto 4"><p>Pulseira Estilosa</p></div>
-      <div class="item"><img src="https://source.unsplash.com/160x160/?earrings" alt="Produto 5"><p>Brinco Fino</p></div>
-      <div class="item"><img src="https://source.unsplash.com/160x160/?silver-ring" alt="Produto 6"><p>Anel Masculino</p></div>
-    </div>
+    <a href="#galeria"><img class="imagem-destaque" src="https://source.unsplash.com/400x300/?ring-jewelry" alt="Mais Vendidos"></a>
   </section>
 
   <section id="promocoes">
     <h2>Promoções</h2>
-    <div class="catalogo">
-      <div class="item"><img src="https://source.unsplash.com/160x160/?jewels" alt="Produto 7"><p>Kit Berloques</p></div>
-      <div class="item"><img src="https://source.unsplash.com/160x160/?chain" alt="Produto 8"><p>Corrente com Desconto</p></div>
-      <div class="item"><img src="https://source.unsplash.com/160x160/?anklet" alt="Produto 9"><p>Tornozeleira Prata</p></div>
-    </div>
+    <a href="#galeria"><img class="imagem-destaque" src="https://source.unsplash.com/400x300/?discount-jewelry" alt="Promoções"></a>
+  </section>
+
+  <section id="galeria">
+    <h2>Galeria de Produtos</h2>
+    <p>Adicione suas imagens reais aqui futuramente.</p>
   </section>
 
   <a href="https://wa.me/5511919710044" class="whatsapp-btn" target="_blank">
@@ -187,9 +170,13 @@
   </a>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    function abrirMenu() {
+      document.getElementById('sidebar').style.left = '0';
+      document.getElementById('overlay').style.display = 'block';
+    }
+    function fecharMenu() {
+      document.getElementById('sidebar').style.left = '-250px';
+      document.getElementById('overlay').style.display = 'none';
     }
   </script>
 </body>
