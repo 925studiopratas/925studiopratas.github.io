@@ -1,94 +1,198 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>925 Studio Pratas</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #fff;
       color: #000;
     }
     header {
       background-color: #000;
       color: #fff;
-      padding: 1rem;
       text-align: center;
+      padding: 15px 10px 5px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    header p {
+      font-size: 14px;
+      margin: 5px 0 0;
+    }
+    nav {
+      background-color: #111;
+      padding: 10px 20px;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      font-size: 26px;
+      color: #fff;
+    }
+    .menu-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #111;
+      padding: 10px 0;
+    }
+    .menu-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 20px;
     }
     .impacto {
       background-color: #555;
-      color: #fff;
-      font-size: 1rem;
-      padding: 0.5rem;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
       text-align: center;
     }
-    .search-container {
+    .busca {
       display: flex;
       justify-content: center;
-      padding: 1rem;
+      padding: 20px;
     }
-    .search-box {
+    .busca input {
       width: 80%;
-      max-width: 500px;
-      padding: 0.75rem;
-      font-size: 1rem;
+      max-width: 400px;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 20px;
       border: 1px solid #ccc;
-      border-radius: 25px;
     }
-    nav {
-      display: flex;
-      justify-content: space-around;
-      background-color: #111;
-      padding: 0.5rem;
+    section {
+      padding: 20px;
     }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
+    h2 {
+      font-size: 22px;
+      border-bottom: 2px solid #000;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
     }
-    nav a:hover {
-      text-decoration: underline;
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
     }
-    .whatsapp-button {
+    .item {
+      background-color: #eee;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+    .item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .item p {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+    .whatsapp-btn {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: transparent;
+      background-color: #25D366;
+      color: white;
       border: none;
-      cursor: pointer;
-    }
-    .whatsapp-button img {
+      border-radius: 50%;
       width: 60px;
       height: 60px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    @media(min-width: 700px) {
+      .menu-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 30px;
+        padding: 0;
+      }
+      .menu-toggle {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>925 Studio Pratas</h1>
+    <p>Estilo, atitude e garantia vitalícia</p>
   </header>
 
-  <div class="impacto">
-    Cada peça carrega uma história. Encontre a sua.
-  </div>
-
-  <div class="search-container">
-    <input type="text" class="search-box" placeholder="O que você está buscando?" />
-  </div>
-
   <nav>
-    <a href="#feminino">Feminino</a>
-    <a href="#masculino">Masculino</a>
-    <a href="https://www.instagram.com/925studio_pratas" target="_blank">Instagram</a>
-    <a href="https://wa.me/5511919710044" target="_blank">WhatsApp</a>
+    <div class="nav-container">
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+      <div class="menu-links" id="menu">
+        <a href="#feminino">Feminino</a>
+        <a href="#masculino">Masculino</a>
+        <a href="https://wa.me/5511919710044" target="_blank">WhatsApp</a>
+      </div>
+    </div>
   </nav>
 
-  <!-- Botão flutuante do WhatsApp -->
-  <a href="https://wa.me/5511919710044" class="whatsapp-button" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+  <div class="impacto">Cada peça carrega uma história. Encontre a sua.</div>
+
+  <div class="busca">
+    <input type="text" placeholder="O que você está buscando?">
+  </div>
+
+  <section id="prontaentrega">
+    <h2>Pronta Entrega</h2>
+    <div class="catalogo">
+      <div class="item"><img src="https://source.unsplash.com/160x160/?jewelry" alt="Produto 1"><p>Anel Feminino Prata 925</p></div>
+      <div class="item"><img src="https://source.unsplash.com/160x160/?ring" alt="Produto 2"><p>Brinco Elegante</p></div>
+      <div class="item"><img src="https://source.unsplash.com/160x160/?silver-necklace" alt="Produto 3"><p>Colar de Prata</p></div>
+    </div>
+  </section>
+
+  <section id="maisvendidos">
+    <h2>Mais Vendidos</h2>
+    <div class="catalogo">
+      <div class="item"><img src="https://source.unsplash.com/160x160/?bracelet" alt="Produto 4"><p>Pulseira Estilosa</p></div>
+      <div class="item"><img src="https://source.unsplash.com/160x160/?earrings" alt="Produto 5"><p>Brinco Fino</p></div>
+      <div class="item"><img src="https://source.unsplash.com/160x160/?silver-ring" alt="Produto 6"><p>Anel Masculino</p></div>
+    </div>
+  </section>
+
+  <section id="promocoes">
+    <h2>Promoções</h2>
+    <div class="catalogo">
+      <div class="item"><img src="https://source.unsplash.com/160x160/?jewels" alt="Produto 7"><p>Kit Berloques</p></div>
+      <div class="item"><img src="https://source.unsplash.com/160x160/?chain" alt="Produto 8"><p>Corrente com Desconto</p></div>
+      <div class="item"><img src="https://source.unsplash.com/160x160/?anklet" alt="Produto 9"><p>Tornozeleira Prata</p></div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/5511919710044" class="whatsapp-btn" target="_blank">
+    &#x1F4AC;
   </a>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+  </script>
 </body>
 </html>
+
 
