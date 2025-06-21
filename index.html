@@ -63,30 +63,30 @@
       border: 1px solid #ccc;
     }
 
-    h2 {
+    .section {
+      padding: 2rem;
+    }
+
+    .section h2 {
       text-align: center;
-      margin-top: 2rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .carousel {
       display: flex;
       overflow-x: auto;
-      scroll-snap-type: x mandatory;
       gap: 1rem;
-      padding: 1rem;
+      padding: 0 1rem;
     }
 
-    .carousel-item {
-      min-width: 200px;
-      height: 120px;
-      background-color: #f0f0f0;
-      border-radius: 10px;
+    .carousel div {
       flex: 0 0 auto;
-      scroll-snap-align: start;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
+      background: #f2f2f2;
+      padding: 1rem;
+      border-radius: 10px;
+      min-width: 150px;
+      text-align: center;
     }
 
     .whatsapp-button {
@@ -124,51 +124,61 @@
     <a href="#promocao">Promoção</a>
     <a href="#feminino">Feminino</a>
     <a href="#masculino">Masculino</a>
-    <a href="https://wa.me/5511919710044" target="_blank">WhatsApp</a>
+    <a href="https://wa.me/5511919710044?text=Ol%C3%A1!%20Vi%20seu%20site%20da%20925%20Studio%20Pratas%20e%20me%20interessei%20por%20uma%20pe%C3%A7a.%20Pode%20me%20ajudar?" target="_blank">WhatsApp</a>
   </nav>
 
   <div class="search-bar">
     <input type="text" placeholder="O que você está buscando?" />
   </div>
 
-  <h2 id="pronta-entrega">Pronta Entrega</h2>
-  <div class="carousel">
-    <div class="carousel-item">Produto 1</div>
-    <div class="carousel-item">Produto 2</div>
-    <div class="carousel-item">Produto 3</div>
+  <div class="section" id="pronta-entrega">
+    <h2>Pronta Entrega</h2>
+    <div class="carousel">
+      <div>Produto 1</div>
+      <div>Produto 2</div>
+      <div>Produto 3</div>
+    </div>
   </div>
 
-  <h2 id="mais-vendidos">Mais Vendidos</h2>
-  <div class="carousel">
-    <div class="carousel-item">Produto A</div>
-    <div class="carousel-item">Produto B</div>
-    <div class="carousel-item">Produto C</div>
+  <div class="section" id="mais-vendidos">
+    <h2>Mais Vendidos</h2>
+    <div class="carousel">
+      <div>Produto 1</div>
+      <div>Produto 2</div>
+      <div>Produto 3</div>
+    </div>
   </div>
 
-  <h2 id="promocao">Promoção</h2>
-  <div class="carousel">
-    <div class="carousel-item">Desconto 1</div>
-    <div class="carousel-item">Desconto 2</div>
-    <div class="carousel-item">Desconto 3</div>
+  <div class="section" id="promocao">
+    <h2>Promoção</h2>
+    <div class="carousel">
+      <div>Produto 1</div>
+      <div>Produto 2</div>
+      <div>Produto 3</div>
+    </div>
   </div>
 
-  <h2 id="feminino">Feminino</h2>
-  <div class="carousel">
-    <div class="carousel-item">Anel Feminino</div>
-    <div class="carousel-item">Brinco Feminino</div>
-    <div class="carousel-item">Colar Feminino</div>
+  <div class="section" id="feminino">
+    <h2>Feminino</h2>
+    <div class="carousel">
+      <div>Anéis</div>
+      <div>Colares</div>
+      <div>Brincos</div>
+    </div>
   </div>
 
-  <h2 id="masculino">Masculino</h2>
-  <div class="carousel">
-    <div class="carousel-item">Pulseira Masculina</div>
-    <div class="carousel-item">Corrente Masculina</div>
-    <div class="carousel-item">Anel Masculino</div>
+  <div class="section" id="masculino">
+    <h2>Masculino</h2>
+    <div class="carousel">
+      <div>Correntes</div>
+      <div>Pulseiras</div>
+      <div>Berloques</div>
+    </div>
   </div>
 
   <div class="whatsapp-button">
-    <a href="https://wa.me/5511919710044" target="_blank">
-      <img src="https://raw.githubusercontent.com/ionic-team/ionicons/master/src/svg/logo-whatsapp.svg" alt="WhatsApp" />
+    <a href="https://wa.me/5511919710044?text=Ol%C3%A1!%20Vi%20seu%20site%20da%20925%20Studio%20Pratas%20e%20me%20interessei%20por%20uma%20pe%C3%A7a.%20Pode%20me%20ajudar?" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
   </div>
 
@@ -180,6 +190,7 @@
   </script>
 </body>
 </html>
+
 
 
 
