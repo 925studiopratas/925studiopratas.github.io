@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -71,13 +72,22 @@
     .carousel {
       display: flex;
       overflow-x: auto;
+      scroll-snap-type: x mandatory;
       gap: 1rem;
       padding: 1rem;
     }
 
-    .carousel img {
-      height: 200px;
-      border-radius: 15px;
+    .carousel-item {
+      min-width: 200px;
+      height: 120px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
     }
 
     .whatsapp-button {
@@ -110,56 +120,56 @@
   </header>
 
   <nav id="mobileMenu">
-    <a href="#mais-vendidos">Mais Vendidos</a>
     <a href="#pronta-entrega">Pronta Entrega</a>
-    <a href="#promocao">Promoções</a>
+    <a href="#mais-vendidos">Mais Vendidos</a>
+    <a href="#promocao">Promoção</a>
     <a href="#feminino">Feminino</a>
     <a href="#masculino">Masculino</a>
-    <a href="https://wa.me/5511919710044?text=Olá! Quero saber mais sobre os produtos da 925 Studio Pratas." target="_blank">WhatsApp</a>
+    <a href="https://wa.me/5511919710044" target="_blank">WhatsApp</a>
   </nav>
 
   <div class="search-bar">
     <input type="text" placeholder="O que você está buscando?" />
   </div>
 
-  <h2 id="mais-vendidos">Mais Vendidos</h2>
-  <div class="carousel">
-    <img src="https://via.placeholder.com/200x200?text=Mais+1" />
-    <img src="https://via.placeholder.com/200x200?text=Mais+2" />
-    <img src="https://via.placeholder.com/200x200?text=Mais+3" />
-  </div>
-
   <h2 id="pronta-entrega">Pronta Entrega</h2>
   <div class="carousel">
-    <img src="https://via.placeholder.com/200x200?text=Entrega+1" />
-    <img src="https://via.placeholder.com/200x200?text=Entrega+2" />
-    <img src="https://via.placeholder.com/200x200?text=Entrega+3" />
+    <div class="carousel-item">Produto 1</div>
+    <div class="carousel-item">Produto 2</div>
+    <div class="carousel-item">Produto 3</div>
   </div>
 
-  <h2 id="promocao">Promoções</h2>
+  <h2 id="mais-vendidos">Mais Vendidos</h2>
   <div class="carousel">
-    <img src="https://via.placeholder.com/200x200?text=Promo+1" />
-    <img src="https://via.placeholder.com/200x200?text=Promo+2" />
-    <img src="https://via.placeholder.com/200x200?text=Promo+3" />
+    <div class="carousel-item">Produto A</div>
+    <div class="carousel-item">Produto B</div>
+    <div class="carousel-item">Produto C</div>
+  </div>
+
+  <h2 id="promocao">Promoção</h2>
+  <div class="carousel">
+    <div class="carousel-item">Desconto 1</div>
+    <div class="carousel-item">Desconto 2</div>
+    <div class="carousel-item">Desconto 3</div>
   </div>
 
   <h2 id="feminino">Feminino</h2>
   <div class="carousel">
-    <img src="https://via.placeholder.com/200x200?text=Feminino+1" />
-    <img src="https://via.placeholder.com/200x200?text=Feminino+2" />
-    <img src="https://via.placeholder.com/200x200?text=Feminino+3" />
+    <div class="carousel-item">Anel Feminino</div>
+    <div class="carousel-item">Brinco Feminino</div>
+    <div class="carousel-item">Colar Feminino</div>
   </div>
 
   <h2 id="masculino">Masculino</h2>
   <div class="carousel">
-    <img src="https://via.placeholder.com/200x200?text=Masculino+1" />
-    <img src="https://via.placeholder.com/200x200?text=Masculino+2" />
-    <img src="https://via.placeholder.com/200x200?text=Masculino+3" />
+    <div class="carousel-item">Pulseira Masculina</div>
+    <div class="carousel-item">Corrente Masculina</div>
+    <div class="carousel-item">Anel Masculino</div>
   </div>
 
   <div class="whatsapp-button">
-    <a href="https://wa.me/5511919710044?text=Olá! Quero saber mais sobre os produtos da 925 Studio Pratas." target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    <a href="https://wa.me/5511919710044" target="_blank">
+      <img src="https://raw.githubusercontent.com/ionic-team/ionicons/master/src/svg/logo-whatsapp.svg" alt="WhatsApp" />
     </a>
   </div>
 
@@ -171,7 +181,6 @@
   </script>
 </body>
 </html>
-
 
 
 
