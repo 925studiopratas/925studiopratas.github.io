@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -63,32 +65,21 @@
       border: 1px solid #ccc;
     }
 
+    h2 {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
     .carousel {
       display: flex;
       overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
       gap: 1rem;
       padding: 1rem;
     }
 
-    .carousel-item {
-      flex: 0 0 auto;
-      width: 250px;
-      scroll-snap-align: center;
-      background-color: #f9f9f9;
+    .carousel img {
+      height: 200px;
       border-radius: 15px;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .carousel-item img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .carousel-item h3 {
-      margin: 0.5rem 0 0;
     }
 
     .whatsapp-button {
@@ -121,43 +112,55 @@
   </header>
 
   <nav id="mobileMenu">
-    <a href="#pronta-entrega">Pronta Entrega</a>
     <a href="#mais-vendidos">Mais Vendidos</a>
+    <a href="#pronta-entrega">Pronta Entrega</a>
     <a href="#promocao">Promoções</a>
     <a href="#feminino">Feminino</a>
     <a href="#masculino">Masculino</a>
-    <a href="https://wa.me/5511919710044?text=Olá! Tenho interesse nos acessórios da 925 Studio Pratas." target="_blank">WhatsApp</a>
+    <a href="https://wa.me/5511919710044?text=Olá! Quero saber mais sobre os produtos da 925 Studio Pratas." target="_blank">WhatsApp</a>
   </nav>
 
   <div class="search-bar">
     <input type="text" placeholder="O que você está buscando?" />
   </div>
 
+  <h2 id="mais-vendidos">Mais Vendidos</h2>
   <div class="carousel">
-    <div class="carousel-item" id="pronta-entrega">
-      <img src="https://via.placeholder.com/250x150.png?text=Pronta+Entrega" alt="Pronta Entrega">
-      <h3>Pronta Entrega</h3>
-    </div>
-    <div class="carousel-item" id="mais-vendidos">
-      <img src="https://via.placeholder.com/250x150.png?text=Mais+Vendidos" alt="Mais Vendidos">
-      <h3>Mais Vendidos</h3>
-    </div>
-    <div class="carousel-item" id="promocao">
-      <img src="https://via.placeholder.com/250x150.png?text=Promoções" alt="Promoções">
-      <h3>Promoções</h3>
-    </div>
-    <div class="carousel-item" id="feminino">
-      <img src="https://via.placeholder.com/250x150.png?text=Feminino" alt="Feminino">
-      <h3>Feminino</h3>
-    </div>
-    <div class="carousel-item" id="masculino">
-      <img src="https://via.placeholder.com/250x150.png?text=Masculino" alt="Masculino">
-      <h3>Masculino</h3>
-    </div>
+    <img src="https://via.placeholder.com/200x200?text=Mais+1" />
+    <img src="https://via.placeholder.com/200x200?text=Mais+2" />
+    <img src="https://via.placeholder.com/200x200?text=Mais+3" />
+  </div>
+
+  <h2 id="pronta-entrega">Pronta Entrega</h2>
+  <div class="carousel">
+    <img src="https://via.placeholder.com/200x200?text=Entrega+1" />
+    <img src="https://via.placeholder.com/200x200?text=Entrega+2" />
+    <img src="https://via.placeholder.com/200x200?text=Entrega+3" />
+  </div>
+
+  <h2 id="promocao">Promoções</h2>
+  <div class="carousel">
+    <img src="https://via.placeholder.com/200x200?text=Promo+1" />
+    <img src="https://via.placeholder.com/200x200?text=Promo+2" />
+    <img src="https://via.placeholder.com/200x200?text=Promo+3" />
+  </div>
+
+  <h2 id="feminino">Feminino</h2>
+  <div class="carousel">
+    <img src="https://via.placeholder.com/200x200?text=Feminino+1" />
+    <img src="https://via.placeholder.com/200x200?text=Feminino+2" />
+    <img src="https://via.placeholder.com/200x200?text=Feminino+3" />
+  </div>
+
+  <h2 id="masculino">Masculino</h2>
+  <div class="carousel">
+    <img src="https://via.placeholder.com/200x200?text=Masculino+1" />
+    <img src="https://via.placeholder.com/200x200?text=Masculino+2" />
+    <img src="https://via.placeholder.com/200x200?text=Masculino+3" />
   </div>
 
   <div class="whatsapp-button">
-    <a href="https://wa.me/5511919710044?text=Olá! Tenho interesse nos acessórios da 925 Studio Pratas." target="_blank">
+    <a href="https://wa.me/5511919710044?text=Olá! Quero saber mais sobre os produtos da 925 Studio Pratas." target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
   </div>
@@ -166,13 +169,10 @@
     function toggleMenu() {
       const menu = document.getElementById('mobileMenu');
       menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-      menu.style.flexDirection = 'column';
     }
   </script>
 </body>
 </html>
-
-
 
 
 
