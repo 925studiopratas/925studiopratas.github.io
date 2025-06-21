@@ -67,23 +67,28 @@
       display: flex;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
       gap: 1rem;
       padding: 1rem;
     }
 
     .carousel-item {
-      min-width: 250px;
-      background: #f0f0f0;
+      flex: 0 0 auto;
+      width: 250px;
+      scroll-snap-align: center;
+      background-color: #f9f9f9;
       border-radius: 15px;
-      padding: 1rem;
-      scroll-snap-align: start;
       text-align: center;
-      cursor: pointer;
-      transition: background 0.3s;
+      padding: 1rem;
     }
 
-    .carousel-item:hover {
-      background: #e0e0e0;
+    .carousel-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .carousel-item h3 {
+      margin: 0.5rem 0 0;
     }
 
     .whatsapp-button {
@@ -118,10 +123,10 @@
   <nav id="mobileMenu">
     <a href="#pronta-entrega">Pronta Entrega</a>
     <a href="#mais-vendidos">Mais Vendidos</a>
-    <a href="#promocao">Promoção</a>
+    <a href="#promocao">Promoções</a>
     <a href="#feminino">Feminino</a>
     <a href="#masculino">Masculino</a>
-    <a href="https://wa.me/5511919710044?text=Ol%C3%A1%21+Vi+seu+site+da+925+Studio+Pratas+e+me+interessei+por+uma+pe%C3%A7a.+Pode+me+ajudar%3F" target="_blank">WhatsApp</a>
+    <a href="https://wa.me/5511919710044?text=Olá! Tenho interesse nos acessórios da 925 Studio Pratas." target="_blank">WhatsApp</a>
   </nav>
 
   <div class="search-bar">
@@ -129,15 +134,30 @@
   </div>
 
   <div class="carousel">
-    <div class="carousel-item" onclick="location.href='#pronta-entrega'">Pronta Entrega</div>
-    <div class="carousel-item" onclick="location.href='#mais-vendidos'">Mais Vendidos</div>
-    <div class="carousel-item" onclick="location.href='#promocao'">Promoções</div>
-    <div class="carousel-item" onclick="location.href='#feminino'">Feminino</div>
-    <div class="carousel-item" onclick="location.href='#masculino'">Masculino</div>
+    <div class="carousel-item" id="pronta-entrega">
+      <img src="https://via.placeholder.com/250x150.png?text=Pronta+Entrega" alt="Pronta Entrega">
+      <h3>Pronta Entrega</h3>
+    </div>
+    <div class="carousel-item" id="mais-vendidos">
+      <img src="https://via.placeholder.com/250x150.png?text=Mais+Vendidos" alt="Mais Vendidos">
+      <h3>Mais Vendidos</h3>
+    </div>
+    <div class="carousel-item" id="promocao">
+      <img src="https://via.placeholder.com/250x150.png?text=Promoções" alt="Promoções">
+      <h3>Promoções</h3>
+    </div>
+    <div class="carousel-item" id="feminino">
+      <img src="https://via.placeholder.com/250x150.png?text=Feminino" alt="Feminino">
+      <h3>Feminino</h3>
+    </div>
+    <div class="carousel-item" id="masculino">
+      <img src="https://via.placeholder.com/250x150.png?text=Masculino" alt="Masculino">
+      <h3>Masculino</h3>
+    </div>
   </div>
 
   <div class="whatsapp-button">
-    <a href="https://wa.me/5511919710044?text=Ol%C3%A1%21+Vi+seu+site+da+925+Studio+Pratas+e+me+interessei+por+uma+pe%C3%A7a.+Pode+me+ajudar%3F" target="_blank">
+    <a href="https://wa.me/5511919710044?text=Olá! Tenho interesse nos acessórios da 925 Studio Pratas." target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
   </div>
@@ -146,11 +166,11 @@
     function toggleMenu() {
       const menu = document.getElementById('mobileMenu');
       menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+      menu.style.flexDirection = 'column';
     }
   </script>
 </body>
 </html>
-
 
 
 
