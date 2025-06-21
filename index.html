@@ -63,6 +63,29 @@
       border: 1px solid #ccc;
     }
 
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .carousel-item {
+      min-width: 250px;
+      background: #f0f0f0;
+      border-radius: 15px;
+      padding: 1rem;
+      scroll-snap-align: start;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .carousel-item:hover {
+      background: #e0e0e0;
+    }
+
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -98,15 +121,23 @@
     <a href="#promocao">Promoção</a>
     <a href="#feminino">Feminino</a>
     <a href="#masculino">Masculino</a>
-    <a href="https://wa.me/5511919710044?text=Ol%C3%A1!%20Vi%20seu%20site%20da%20925%20Studio%20Pratas%20e%20me%20interessei%20por%20uma%20pe%C3%A7a.%20Pode%20me%20ajudar%3F" target="_blank">WhatsApp</a>
+    <a href="https://wa.me/5511919710044?text=Ol%C3%A1%21+Vi+seu+site+da+925+Studio+Pratas+e+me+interessei+por+uma+pe%C3%A7a.+Pode+me+ajudar%3F" target="_blank">WhatsApp</a>
   </nav>
 
   <div class="search-bar">
     <input type="text" placeholder="O que você está buscando?" />
   </div>
 
+  <div class="carousel">
+    <div class="carousel-item" onclick="location.href='#pronta-entrega'">Pronta Entrega</div>
+    <div class="carousel-item" onclick="location.href='#mais-vendidos'">Mais Vendidos</div>
+    <div class="carousel-item" onclick="location.href='#promocao'">Promoções</div>
+    <div class="carousel-item" onclick="location.href='#feminino'">Feminino</div>
+    <div class="carousel-item" onclick="location.href='#masculino'">Masculino</div>
+  </div>
+
   <div class="whatsapp-button">
-    <a href="https://wa.me/5511919710044?text=Ol%C3%A1!%20Vi%20seu%20site%20da%20925%20Studio%20Pratas%20e%20me%20interessei%20por%20uma%20pe%C3%A7a.%20Pode%20me%20ajudar%3F" target="_blank">
+    <a href="https://wa.me/5511919710044?text=Ol%C3%A1%21+Vi+seu+site+da+925+Studio+Pratas+e+me+interessei+por+uma+pe%C3%A7a.+Pode+me+ajudar%3F" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
   </div>
@@ -119,6 +150,7 @@
   </script>
 </body>
 </html>
+
 
 
 
